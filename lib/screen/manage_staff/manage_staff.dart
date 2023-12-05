@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:healtether_app/add_appointment.dart';
+import 'package:healtether_app/widgets/add_appointment.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 
 
-import '../../chat.dart';
+import '../../widgets/whatsapp/chat.dart';
 import '../../constatnts/constant.dart';
-import '../../notification.dart';
+import '../../widgets/notification/notification.dart';
 
 class manage_staff extends StatefulWidget {
   const manage_staff({super.key});
@@ -547,7 +547,7 @@ class _add_memberState extends State<add_member> {
                       // Handle Notification button pressed
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const notification()),
+                        MaterialPageRoute(builder: (context) =>  notification()),
                       );
                     },
                   ),
@@ -1034,7 +1034,7 @@ class _add_member_Screen_twoState extends State<add_member_Screen_two> {
                       // Handle Notification button pressed
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const notification()),
+                        MaterialPageRoute(builder: (context) =>  notification()),
                       );
                     },
                   ),
@@ -1534,7 +1534,7 @@ class _add_member_Screen_threeState extends State<add_member_Screen_three> {
                       // Handle Notification button pressed
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const notification()),
+                        MaterialPageRoute(builder: (context) =>  notification()),
                       );
                     },
                   ),
@@ -2086,7 +2086,7 @@ class _add_member_Screen_fourState extends State<add_member_Screen_four> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const notification()),
+                              builder: (context) =>  notification()),
                         );
                       },
                     ),
@@ -2593,7 +2593,7 @@ class _staff_profileState extends State<staff_profile> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const notification()),
+                              builder: (context) =>  notification()),
                         );
                       },
                     ),

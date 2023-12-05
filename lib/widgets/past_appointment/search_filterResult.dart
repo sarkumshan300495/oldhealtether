@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:healtether_app/widgets/past_appointment/past_appointmentdetails.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment_details.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
 
 class Search_Filter_Result extends StatefulWidget {
   const Search_Filter_Result({super.key});
@@ -125,7 +126,7 @@ class _Search_Filter_ResultState extends State<Search_Filter_Result>
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => chat_display()),
+                              builder: (context) => chat()),
                         );
                         // Handle Chat button pressed
                       },

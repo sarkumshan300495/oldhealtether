@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
-import 'package:healtether_app/chat.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
 import 'package:healtether_app/constatnts/constant.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:flutter/src/services/text_formatter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';

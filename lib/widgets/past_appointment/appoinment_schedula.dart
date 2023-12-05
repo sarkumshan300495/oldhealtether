@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:healtether_app/widgets/past_appointment/past_appointmentdetails.dart';
 import 'package:healtether_app/widgets/past_appointment/search_filterResult.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment_details.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
+import 'package:healtether_app/widgets/whatsapp/chat_list.dart';
 
 class Past_Appointment extends StatefulWidget {
   const Past_Appointment({super.key});

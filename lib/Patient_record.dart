@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
-import 'package:healtether_app/chat.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -1351,7 +1351,7 @@ class _personal_detailsState extends State<personal_details> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const notification()),
+                            builder: (context) =>  notification()),
                       );
                     },
                   ),
@@ -1796,7 +1796,7 @@ class _contect_detailsState extends State<contect_details> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const notification()),
+                            builder: (context) =>  notification()),
                       );
                     },
                   ),
@@ -2296,7 +2296,7 @@ class _payment_detailsState extends State<payment_details> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const notification()),
+                              builder: (context) =>  notification()),
                         );
                       },
                     ),
@@ -2801,7 +2801,7 @@ class _documents_detailsState extends State<documents_details> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const notification()),
+                            builder: (context) =>  notification()),
                       );
                     },
                   ),

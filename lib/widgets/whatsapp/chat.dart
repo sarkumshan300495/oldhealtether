@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
+import 'package:healtether_app/widgets/whatsapp/chat_list.dart';
 
 class chat extends StatefulWidget {
   const chat({super.key});
@@ -159,8 +160,13 @@ class _chatState extends State<chat> {
                                                               Clip.antiAlias,
                                                           decoration:
                                                               BoxDecoration(),
-                                                          child: Icon(Icons
-                                                              .person_add_alt_rounded)),
+                                                          child:  Image.asset(
+                              'assets/images/floatadd.png',
+                              width: 30,
+                              height: 17.5,
+                            ),
+                                                              
+                                                              ),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Schedule\nAppointment',
@@ -224,8 +230,11 @@ class _chatState extends State<chat> {
                                                               Clip.antiAlias,
                                                           decoration:
                                                               BoxDecoration(),
-                                                          child: Icon(Icons
-                                                              .folder_shared)),
+                                                          child:  Image.asset(
+                             'assets/images/solar-notes-linear-Rph.png',
+                              width: 30,
+                              height: 17.5,
+                            ),),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Send\nPrescription',
@@ -289,8 +298,11 @@ class _chatState extends State<chat> {
                                                               Clip.antiAlias,
                                                           decoration:
                                                               BoxDecoration(),
-                                                          child: Icon(Icons
-                                                              .sticky_note_2_outlined)),
+                                                          child:  Image.asset(
+                             'assets/images/mingcute-bill-line-2v1.png',
+                              width: 30,
+                              height: 17.5,
+                            ),),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Send\nInvoice',
@@ -321,48 +333,21 @@ class _chatState extends State<chat> {
             )
           ],
         ),
-        body: Column(children: [
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 100,
+        body: Container(
+           width: double.infinity,
+              height: 646,
+          decoration: BoxDecoration (
+                color: Color(0xfffffee9),
               ),
-              Container(
-                width: 248,
-                height: 51,
-                decoration: ShapeDecoration(
-                  color: Color(0xFFD9D9D9),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                ),
-                child: SizedBox(
-                  width: 225,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Text(
-                      'Hello, I want to book an appointment',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Row(
+          child: Column(children: [
+            SizedBox(
+              height: 10,
+            ),
+            Row(
               children: [
+                SizedBox(
+                  width: 100,
+                ),
                 Container(
                   width: 248,
                   height: 51,
@@ -386,81 +371,115 @@ class _chatState extends State<chat> {
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
+                )
               ],
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 145,
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Row(
+                children: [
+                  Container(
+                    width: 248,
+                    height: 51,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
+                    ),
+                    child: SizedBox(
+                      width: 225,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text(
+                          'Hello, I want to book an appointment',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                ],
               ),
-              Container(
-                width: 200,
-                height: 51,
-                decoration: ShapeDecoration(
-                  color: Color(0xFFD9D9D9),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 145,
                 ),
-                child: SizedBox(
+                Container(
                   width: 200,
-                  child: Padding(
+                  height: 51,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFD9D9D9),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)),
+                  ),
+                  child: SizedBox(
+                    width: 200,
+                    child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text(
+                          'I would like to visit the doctor.',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        )),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 100,
+                ),
+                Container(
+                  width: 248,
+                  height: 51,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFD9D9D9),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)),
+                  ),
+                  child: SizedBox(
+                    width: 225,
+                    child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Text(
-                        'I would like to visit the doctor.',
+                        'Hello, I want to book an appointment',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                         ),
-                      )),
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 100,
-              ),
-              Container(
-                width: 248,
-                height: 51,
-                decoration: ShapeDecoration(
-                  color: Color(0xFFD9D9D9),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                ),
-                child: SizedBox(
-                  width: 225,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Text(
-                      'Hello, I want to book an appointment',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
-                ),
-              )
-            ],
-          ),
-        ]),
+                )
+              ],
+            ),
+          ]),
+        ),
         bottomNavigationBar: BottomAppBar(
              color: Color(0xfffffee9),
           child:      Container(
@@ -538,28 +557,31 @@ class _chatState extends State<chat> {
                 ),
                 Container(
                   // actionbuttonpcD (1:5466)
-                  margin: EdgeInsets.fromLTRB(0, 0.5, 0, 0.5),
+                  margin: EdgeInsets.fromLTRB(0, 0.1, 0, 0.5),
                   child: TextButton(
                     onPressed: () {},
                     style: TextButton.styleFrom (
                       padding: EdgeInsets.zero,
                     ),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(21, 20, 20.67, 19.67),
-                      height: double.infinity,
-                      decoration: BoxDecoration (
-                        color: Color(0xff03bf9c),
-                        borderRadius: BorderRadius.circular(7),
-                      ),
-                      child: Center(
-                        // icroundaddVyF (I1:5466;41:8644)
-                        child: SizedBox(
-                          width: 18.33,
-                          height: 18.33,
-                          child: Image.asset(
-                            'assets/images/ic-round-add.png',
+                    child: Expanded(
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(21, 20, 21.67, 19.67),
+                        height: double.infinity,
+                        decoration: BoxDecoration (
+                          color: Color(0xff03bf9c),
+                          borderRadius: BorderRadius.circular(7),
+                        ),
+                        child:
+                         Center(
+                          
+                          child: SizedBox(
                             width: 18.33,
                             height: 18.33,
+                            child: Image.asset(
+                              'assets/images/ic-round-add.png',
+                              width: 18.33,
+                              height: 18.33,
+                            ),
                           ),
                         ),
                       ),

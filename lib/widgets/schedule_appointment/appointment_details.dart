@@ -32,7 +32,11 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
             shadowColor: Color(0xFFC7E9E3),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            icon: Image.asset("assets/popmenu.png"),
+            icon: Image.asset(
+              "assets/popmenu.png",
+              height: 20,
+              width: 20,
+            ),
             color: const Color.fromARGB(255, 255, 255, 255),
             itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
               PopupMenuItem<String>(
@@ -76,7 +80,7 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                 },
                 value: "3",
                 child: const Text(
-                  'Delete Appointment details',
+                  'Cancel Appointment',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 17,
@@ -89,6 +93,40 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                 value: "4",
                 child: Text(
                   'View Patient details',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 17,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+              PopupMenuItem<String>(
+                onTap: () {
+                  Future.delayed(Duration.zero).then((value) {
+                    showAlert5(context);
+                  });
+                },
+                value: "4",
+                child: Text(
+                  'Notify Patient',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 17,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+              PopupMenuItem<String>(
+                onTap: () {
+                  Future.delayed(Duration.zero).then((value) {
+                    showAlert4(context);
+                  });
+                },
+                value: "4",
+                child: Text(
+                  'Delete Patient ',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 17,
@@ -638,7 +676,7 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                                                 width: 61.24 * fem,
                                                 height: 43.36 * fem,
                                                 child: Image.asset(
-                                                  'assets/page-1/images/upload-cloud-Wqs.png',
+                                                  'assets/images/upload-cloud.png',
                                                   width: 61.24 * fem,
                                                   height: 43.36 * fem,
                                                 ),
@@ -693,74 +731,63 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                               ),
                             ),
                             Container(
-                              // addnote4YD (1:5764)
+                              // notesB89 (1:4145)
+                              margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
                               width: double.infinity,
-                              height: 69 * fem,
+                              height: 67,
                               child: Container(
-                                // autogroupqyfsR7s (NUyVcr28UcATe6U5y6qyfs)
-                                padding: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 0 * fem, 12 * fem),
+                                // autogrouptjw5Ww7 (NUxo9qnAJCYvvpMgm4TjW5)
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 12),
                                 width: double.infinity,
-                                height: 68 * fem,
+                                height: 66,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      // frame608YiH (1:5765)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 287.02 * fem, 10 * fem),
-                                      height: 25 * fem,
+                                      // notesSJy (1:4147)
+                                      margin: EdgeInsets.fromLTRB(0, 0, 0, 12),
                                       child: Text(
-                                        'Notes',
+                                        'NOTES',
                                         style: TextStyle(
                                           fontFamily: 'Poppins',
-                                          fontSize: 16 * ffem,
-                                          fontWeight: FontWeight.w700,
-                                          height: 1.3899999857 * ffem / fem,
-                                          letterSpacing: 0.4 * fem,
-                                          color: Color(0xff494949),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                          height: 1.28125 / fem,
+                                          letterSpacing: -0.16,
+                                          color: Color(0xff0d0d0d),
                                         ),
                                       ),
                                     ),
                                     Container(
-                                      // frame400qSV (1:5768)
-                                      decoration: BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(
-                                            color: Color(0xff009176),
-                                          ),
-                                        ),
-                                        //  borderRadius: BorderRadius.circular(9*fem),
-                                      ),
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 188.02 * fem, 0 * fem),
+                                      // addaselfnoteYso (1:4148)
+                                      margin:
+                                          EdgeInsets.fromLTRB(0, 0, 188.02, 0),
                                       width: double.infinity,
                                       child: Row(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
                                         children: [
                                           Container(
-                                            // group36373mL9 (1:5769)
-
-                                            margin: EdgeInsets.fromLTRB(0 * fem,
-                                                0 * fem, 12 * fem, 0 * fem),
-                                            width: 14 * fem,
-                                            height: 14 * fem,
+                                            // group363735cq (1:4149)
+                                            margin: EdgeInsets.fromLTRB(
+                                                0, 0, 12, 0),
+                                            width: 14,
+                                            height: 14,
                                             child: Image.asset(
                                               'assets/images/group-36373.png',
-                                              width: 14 * fem,
-                                              height: 14 * fem,
+                                              width: 14,
+                                              height: 14,
                                             ),
                                           ),
                                           Text(
-                                            // addaselfnoteHZP (1:5772)
+                                            // addaselfnoteCBf (1:4152)
                                             'Add a Self note ',
                                             style: TextStyle(
                                               fontFamily: 'Poppins',
-                                              fontSize: 16 * ffem,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w400,
-                                              height: 1.28125 * ffem / fem,
-                                              letterSpacing: -0.16 * fem,
+                                              height: 1.28125 / fem,
+                                              letterSpacing: -0.16,
                                               fontStyle: FontStyle.italic,
                                               color: Color(0xff009176),
                                             ),
@@ -773,28 +800,29 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                               ),
                             ),
                             Container(
-                    // endconsultationXjj (1:4143)
-                    margin: EdgeInsets.fromLTRB(2*fem, 0*fem, 1.02*fem, 0*fem),
-                    width: double.infinity,
-                    height: 59*fem,
-                    decoration: BoxDecoration (
-                      color: Color(0xff03bf9c),
-                      borderRadius: BorderRadius.circular(7*fem),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'End consultation',
-                        style: TextStyle (
-                        fontFamily:  'Poppins',
-                          fontSize: 16*ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.28125*ffem/fem,
-                          letterSpacing: 0.16*fem,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                    ),
-                  ),
+                              // endconsultationXjj (1:4143)
+                              margin: EdgeInsets.fromLTRB(
+                                  2 * fem, 0 * fem, 1.02 * fem, 0 * fem),
+                              width: double.infinity,
+                              height: 59 * fem,
+                              decoration: BoxDecoration(
+                                color: Color(0xff03bf9c),
+                                borderRadius: BorderRadius.circular(7 * fem),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'End consultation',
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16 * ffem,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.28125 * ffem / fem,
+                                    letterSpacing: 0.16 * fem,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -1401,465 +1429,152 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 2 + 30,
                   child: ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      // borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: Scaffold(
-                        body: Container(
-                          clipBehavior: Clip.antiAlias,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0xFFC7E9E3),
-                                blurRadius: 22,
-                                offset: Offset(0, -4),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                          child: Stack(
-                            children: [
-                              const Positioned(
-                                left: 27,
-                                top: 25,
-                                child: Text(
-                                  'Schedule Follow-up',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
+                    body: Container(
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0xFFC7E9E3),
+                            blurRadius: 22,
+                            offset: Offset(0, -4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            left: 27,
+                            top: 25,
+                            child: Text(
+                              'Schedule Follow-up',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
                               ),
-                              Positioned(
-                                left: 27,
-                                top: 62,
-                                child: SizedBox(
-                                  height: 200,
-                                  width: MediaQuery.of(context).size.width / 2 +
-                                      100,
-                                  child: Column(
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 62,
+                            child: SizedBox(
+                              height: 200,
+                              width:
+                                  MediaQuery.of(context).size.width / 2 + 100,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Row(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const SizedBox(
-                                            width: 120,
-                                            child: Text(
-                                              'Follow-up date ',
-                                              style: TextStyle(
-                                                color: Color(0xFF1F1F1F),
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
+                                      const SizedBox(
+                                        width: 120,
+                                        child: Text(
+                                          'Follow-up date ',
+                                          style: TextStyle(
+                                            color: Color(0xFF1F1F1F),
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w500,
                                           ),
-                                          const SizedBox(width: 30),
-                                          SizedBox(
-                                            width: 130,
-                                            child: TextFormField(
-                                              controller:
-                                                  _followUpDateController,
-                                              readOnly: true,
-                                              onTap: () async {
-                                                // Show DatePicker when the field is tapped
-                                                DateTime currentDate =
-                                                    DateTime.now();
-                                                DateTime? selectedDate =
-                                                    await showDatePicker(
-                                                  context: context,
-                                                  initialDate: currentDate,
-                                                  firstDate: currentDate,
-                                                  lastDate: currentDate.add(
-                                                    const Duration(days: 365),
-                                                  ),
-                                                );
-                                                if (selectedDate != null) {
-                                                  _onDateSelected(selectedDate);
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                suffixIcon: IconButton(
-                                                  color: Colors.black,
-                                                  onPressed: () {},
-                                                  icon: const Icon(
-                                                    Icons.arrow_drop_down,
-                                                    size: 20,
-                                                  ),
-                                                ),
-                                                hintText: 'Select',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 16),
-                                      Container(
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8,
-                                                      vertical: 10),
-                                              decoration: ShapeDecoration(
-                                                color: const Color(0xFFF7F0FC),
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8)),
-                                              ),
-                                              child: const Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    'none',
-                                                    style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 16,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            const SizedBox(width: 8),
-                                            Container(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8,
-                                                      vertical: 10),
-                                              decoration: ShapeDecoration(
-                                                color: const Color(0xFFF7F0FC),
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8)),
-                                              ),
-                                              child: const Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    'After 3 days',
-                                                    style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 16,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            const SizedBox(width: 8),
-                                            Container(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8,
-                                                      vertical: 10),
-                                              decoration: ShapeDecoration(
-                                                color: const Color(0xFFF7F0FC),
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8)),
-                                              ),
-                                              child: const Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    'After 7 days',
-                                                    style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 16,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
                                         ),
                                       ),
-                                      const SizedBox(height: 16),
-                                      Expanded(
-                                        child: SizedBox(
-                                          height: 74,
-                                          // color: Colors.black,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 17.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: [
-                                                const SizedBox(
-                                                  width: 120,
-                                                  child: Text(
-                                                    'Time',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      color: Color(0xFF1F1F1F),
-                                                      fontSize: 16,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ),
-                                                // const SizedBox(width: 10),
-                                                SizedBox(
-                                                  width: 130,
-                                                  child: TextFormField(
-                                                    controller:
-                                                        _followUpTimeController,
-                                                    readOnly: true,
-                                                    onTap: () async {
-                                                      // Show TimePicker when the field is tapped
-                                                      TimeOfDay currentTime =
-                                                          TimeOfDay.now();
-                                                      TimeOfDay? selectedTime =
-                                                          await showTimePicker(
-                                                        context: context,
-                                                        initialTime:
-                                                            currentTime,
-                                                      );
-                                                      if (selectedTime !=
-                                                          null) {
-                                                        _onTimeSelected(
-                                                            selectedTime);
-                                                      }
-                                                    },
-                                                    decoration: InputDecoration(
-                                                      suffixIcon: const Icon(
-                                                          Icons
-                                                              .arrow_drop_down),
-                                                      hintText: 'Select',
-                                                      border:
-                                                          OutlineInputBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(7),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
+                                      const SizedBox(width: 30),
+                                      SizedBox(
+                                        width: 130,
+                                        child: TextFormField(
+                                          controller: _followUpDateController,
+                                          readOnly: true,
+                                          onTap: () async {
+                                            // Show DatePicker when the field is tapped
+                                            DateTime currentDate =
+                                                DateTime.now();
+                                            DateTime? selectedDate =
+                                                await showDatePicker(
+                                              context: context,
+                                              initialDate: currentDate,
+                                              firstDate: currentDate,
+                                              lastDate: currentDate.add(
+                                                const Duration(days: 365),
+                                              ),
+                                            );
+                                            if (selectedDate != null) {
+                                              _onDateSelected(selectedDate);
+                                            }
+                                          },
+                                          decoration: InputDecoration(
+                                            suffixIcon: Container(
+                                              // frame340FVw (1:4583)
+                                              width: 19,
+                                              height: 15,
+                                              child: Image.asset(
+                                                'assets/images/downarrow.png',
+                                                width: 19,
+                                                height: 15,
+                                              ),
+                                            ),
+                                            //                   suffix:    Container(
+                                            //   // frame340FVw (1:4583)
+                                            //   width: 19,
+                                            //   height: 15,
+                                            //   child: Image.asset(
+                                            //     'assets/page-1/images/frame-340-SSy.png',
+                                            //     width: 19,
+                                            //     height: 15,
+                                            //   ),
+                                            // ),
+                                            hintText: 'Select',
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(7),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ],
                                   ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 27,
-                                top: 333,
-                                right: 27,
-                                child: Container(
-                                  // width: 355,
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = true;
-                                          // });
-                                          _onDonePressed();
-                                        },
-                                        child: Container(
-                                          width: 120,
-                                          height: 55,
+                                  const SizedBox(height: 16),
+                                  Container(
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
                                           padding: const EdgeInsets.symmetric(
-                                              horizontal: 26, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
+                                              horizontal: 8, vertical: 10),
                                           decoration: ShapeDecoration(
-                                            color: const Color(0xFF03BF9C),
+                                            color: const Color(0xFFF7F0FC),
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(9)),
+                                                    BorderRadius.circular(8)),
                                           ),
-                                          child: const InkWell(
-                                            child: Text(
-                                              'Done',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 16),
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = false;
-                                          // });
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const appointment(),
-                                              ));
-                                        },
-                                        child: Container(
-                                          width: 120,
-                                          height: 55,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 26, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: ShapeDecoration(
-                                            shape: RoundedRectangleBorder(
-                                              side:
-                                                  const BorderSide(width: 0.50),
-                                              borderRadius:
-                                                  BorderRadius.circular(9),
-                                            ),
-                                          ),
-                                          child: const Text(
-                                            'Exit',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Color(0xFF6A798A),
-                                              fontSize: 16,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 27,
-                                top: 280,
-                                child: SizedBox(
-                                  width: 295,
-                                  height: 47,
-                                  child: Stack(
-                                    children: [
-                                      const Positioned(
-                                        left: 28,
-                                        top: 21,
-                                        child: SizedBox(
-                                          width: 267,
-                                          child: Text(
-                                            'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
-                                            style: TextStyle(
-                                              color: Color(0xFF6B6B6B),
-                                              fontSize: 9,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        left: 0,
-                                        top: 0,
-                                        child: SizedBox(
-                                          width: 195,
-                                          height: 20,
-                                          child: Row(
+                                          child: const Row(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
-                                                MainAxisAlignment.start,
+                                                MainAxisAlignment.center,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.center,
                                             children: [
-                                              Container(
-                                                width: 20,
-                                                height: 20,
-                                                decoration: const BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Colors.grey,
-                                                      offset: Offset(-1, -1),
-                                                    ),
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Color.fromARGB(
-                                                          92, 255, 255, 255),
-                                                      offset: Offset(-2, 5),
-                                                    ),
-                                                  ],
-                                                ),
-                                                // child: Checkbox(
-                                                // side: BorderSide(
-
-                                                //   color:Colors.black,
-                                                //   strokeAlign: BorderSide.strokeAlignInside),
-
-                                                //   activeColor: primaryColor,
-                                                //     value: ischecked_yes,
-                                                //    // tristate: true,
-                                                //     onChanged: (value) {
-                                                //       setState(() {
-                                                //      ischecked_yes  =
-                                                //             value!;
-
-                                                //       });
-                                                //     }),
-                                              ),
-                                              const SizedBox(width: 8),
-                                              const Text(
-                                                'Notify patient on Whatsapp',
+                                              Text(
+                                                'none',
                                                 style: TextStyle(
-                                                  color: Color(0xFF6B6B6B),
-                                                  fontSize: 12,
+                                                  color: Colors.black,
+                                                  fontSize: 16,
                                                   fontFamily: 'Poppins',
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -1867,32 +1582,343 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                                             ],
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                        const SizedBox(width: 8),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8, vertical: 10),
+                                          decoration: ShapeDecoration(
+                                            color: const Color(0xFFF7F0FC),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8)),
+                                          ),
+                                          child: const Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                'After 3 days',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8, vertical: 10),
+                                          decoration: ShapeDecoration(
+                                            color: const Color(0xFFF7F0FC),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8)),
+                                          ),
+                                          child: const Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                'After 7 days',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 27,
-                                top: 54,
-                                child: Container(
-                                  width: 59,
-                                  decoration: const ShapeDecoration(
-                                    shape: RoundedRectangleBorder(
-                                      side: BorderSide(
-                                        width: 1,
-                                        strokeAlign:
-                                            BorderSide.strokeAlignCenter,
-                                        color: Color(0xFF03BF9C),
+                                  const SizedBox(height: 16),
+                                  Expanded(
+                                    child: SizedBox(
+                                      height: 74,
+                                      // color: Colors.black,
+                                      child: Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 17.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const SizedBox(
+                                              width: 120,
+                                              child: Text(
+                                                'Time',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: Color(0xFF1F1F1F),
+                                                  fontSize: 16,
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                            ),
+                                            // const SizedBox(width: 10),
+                                            SizedBox(
+                                              width: 130,
+                                              child: TextFormField(
+                                                controller:
+                                                    _followUpTimeController,
+                                                readOnly: true,
+                                                onTap: () async {
+                                                  // Show TimePicker when the field is tapped
+                                                  TimeOfDay currentTime =
+                                                      TimeOfDay.now();
+                                                  TimeOfDay? selectedTime =
+                                                      await showTimePicker(
+                                                    context: context,
+                                                    initialTime: currentTime,
+                                                  );
+                                                  if (selectedTime != null) {
+                                                    _onTimeSelected(
+                                                        selectedTime);
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  suffixIcon: Container(
+                                                    // frame340FVw (1:4583)
+                                                    width: 19,
+                                                    height: 15,
+                                                    child: Image.asset(
+                                                      'assets/images/downarrow.png',
+                                                      width: 19,
+                                                      height: 15,
+                                                    ),
+                                                  ),
+                                                  hintText: 'Select',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            7),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 333,
+                            right: 27,
+                            child: Container(
+                              // width: 355,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = true;
+                                      // });
+                                      _onDonePressed();
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 26, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0xFF03BF9C),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(9)),
+                                      ),
+                                      child: const InkWell(
+                                        child: Text(
+                                          'Done',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = false;
+                                      // });
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const appointment(),
+                                          ));
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 26, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(width: 0.50),
+                                          borderRadius:
+                                              BorderRadius.circular(9),
+                                        ),
+                                      ),
+                                      child: const Text(
+                                        'Exit',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Color(0xFF6A798A),
+                                          fontSize: 16,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 280,
+                            child: SizedBox(
+                              width: 295,
+                              height: 47,
+                              child: Stack(
+                                children: [
+                                  const Positioned(
+                                    left: 28,
+                                    top: 21,
+                                    child: SizedBox(
+                                      width: 267,
+                                      child: Text(
+                                        'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
+                                        style: TextStyle(
+                                          color: Color(0xFF6B6B6B),
+                                          fontSize: 9,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: SizedBox(
+                                      width: 195,
+                                      height: 20,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 20,
+                                            height: 20,
+                                            decoration: const BoxDecoration(
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Colors.grey,
+                                                  offset: Offset(-1, -1),
+                                                ),
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Color.fromARGB(
+                                                      92, 255, 255, 255),
+                                                  offset: Offset(-2, 5),
+                                                ),
+                                              ],
+                                            ),
+                                            // child: Checkbox(
+                                            // side: BorderSide(
+
+                                            //   color:Colors.black,
+                                            //   strokeAlign: BorderSide.strokeAlignInside),
+
+                                            //   activeColor: primaryColor,
+                                            //     value: ischecked_yes,
+                                            //    // tristate: true,
+                                            //     onChanged: (value) {
+                                            //       setState(() {
+                                            //      ischecked_yes  =
+                                            //             value!;
+
+                                            //       });
+                                            //     }),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          const Text(
+                                            'Notify patient on Whatsapp',
+                                            style: TextStyle(
+                                              color: Color(0xFF6B6B6B),
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 54,
+                            child: Container(
+                              width: 59,
+                              decoration: const ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    width: 1,
+                                    strokeAlign: BorderSide.strokeAlignCenter,
+                                    color: Color(0xFF03BF9C),
+                                  ),
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ))),
+                        ],
+                      ),
+                    ),
+                  ))),
             ),
           );
         });
@@ -1912,374 +1938,377 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 3 + 130,
                   child: ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      //  borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: Scaffold(
-                        body: Container(
-                          clipBehavior: Clip.antiAlias,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0xFFC7E9E3),
-                                blurRadius: 22,
-                                offset: Offset(0, -4),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                          child: Stack(
-                            children: [
-                              const Positioned(
-                                left: 27,
-                                top: 25,
-                                child: Text(
-                                  'ReSchedule ',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
+                    body: Container(
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0xFFC7E9E3),
+                            blurRadius: 22,
+                            offset: Offset(0, -4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            left: 27,
+                            top: 25,
+                            child: Text(
+                              'ReSchedule ',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
                               ),
-                              Positioned(
-                                left: 27,
-                                top: 62,
-                                child: SizedBox(
-                                  height: 200,
-                                  width: MediaQuery.of(context).size.width / 2 +
-                                      100,
-                                  child: Column(
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 62,
+                            child: SizedBox(
+                              height: 200,
+                              width:
+                                  MediaQuery.of(context).size.width / 2 + 100,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Row(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const SizedBox(
-                                            width: 120,
-                                            //color: Colors.black,
-                                            child: Text(
-                                              'Set the date ',
-                                              style: TextStyle(
-                                                color: Color(0xFF1F1F1F),
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 30),
-                                          SizedBox(
-                                            width: 130,
-                                            child: TextFormField(
-                                              controller:
-                                                  _followUpDateController,
-                                              readOnly: true,
-                                              onTap: () async {
-                                                // Show DatePicker when the field is tapped
-                                                DateTime currentDate =
-                                                    DateTime.now();
-                                                DateTime? selectedDate =
-                                                    await showDatePicker(
-                                                  context: context,
-                                                  initialDate: currentDate,
-                                                  firstDate: currentDate,
-                                                  lastDate: currentDate.add(
-                                                    const Duration(days: 365),
-                                                  ),
-                                                );
-                                                if (selectedDate != null) {
-                                                  _onDateSelected(selectedDate);
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                suffixIcon: IconButton(
-                                                  color: Colors.black,
-                                                  onPressed: () {},
-                                                  icon: const Icon(
-                                                    Icons.arrow_drop_down,
-                                                    size: 20,
-                                                  ),
-                                                ),
-                                                hintText: 'Select',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 25),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const SizedBox(
-                                            width: 120,
-                                            //color: Colors.black,
-                                            child: Text(
-                                              'Time ',
-                                              style: TextStyle(
-                                                color: Color(0xFF1F1F1F),
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 30),
-                                          SizedBox(
-                                            width: 130,
-                                            child: TextFormField(
-                                              controller:
-                                                  _followUpTimeController,
-                                              readOnly: true,
-                                              onTap: () async {
-                                                // Show TimePicker when the field is tapped
-                                                TimeOfDay currentTime =
-                                                    TimeOfDay.now();
-                                                TimeOfDay? selectedTime =
-                                                    await showTimePicker(
-                                                  context: context,
-                                                  initialTime: currentTime,
-                                                );
-                                                if (selectedTime != null) {
-                                                  _onTimeSelected(selectedTime);
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                suffixIcon: const Icon(
-                                                    Icons.arrow_drop_down),
-                                                hintText: 'Select',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 20,
-                                top: 300,
-                                right: 20,
-                                child: Container(
-                                  // width: 355,
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                        CrossAxisAlignment.center,
                                     children: [
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = true;
-                                          // });
-                                          _onDonePressed();
-                                        },
-                                        child: Container(
-                                          width: 120,
-                                          height: 55,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 26, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: ShapeDecoration(
-                                            color: const Color(0xFF03BF9C),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(9)),
-                                          ),
-                                          child: const InkWell(
-                                            child: Text(
-                                              'Done',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                              ),
-                                            ),
+                                      const SizedBox(
+                                        width: 120,
+                                        //color: Colors.black,
+                                        child: Text(
+                                          'Set the date ',
+                                          style: TextStyle(
+                                            color: Color(0xFF1F1F1F),
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w500,
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(width: 16),
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = false;
-                                          // });
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const appointment(),
-                                              ));
-                                        },
-                                        child: Container(
-                                          width: 120,
-                                          height: 55,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 26, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: ShapeDecoration(
-                                            shape: RoundedRectangleBorder(
-                                              side:
-                                                  const BorderSide(width: 0.50),
-                                              borderRadius:
-                                                  BorderRadius.circular(9),
+                                      const SizedBox(width: 30),
+                                      SizedBox(
+                                        width: 130,
+                                        child: TextFormField(
+                                          controller: _followUpDateController,
+                                          readOnly: true,
+                                          onTap: () async {
+                                            // Show DatePicker when the field is tapped
+                                            DateTime currentDate =
+                                                DateTime.now();
+                                            DateTime? selectedDate =
+                                                await showDatePicker(
+                                              context: context,
+                                              initialDate: currentDate,
+                                              firstDate: currentDate,
+                                              lastDate: currentDate.add(
+                                                const Duration(days: 365),
+                                              ),
+                                            );
+                                            if (selectedDate != null) {
+                                              _onDateSelected(selectedDate);
+                                            }
+                                          },
+                                          decoration: InputDecoration(
+                                            suffixIcon: Container(
+                                              // frame340FVw (1:4583)
+                                              width: 19,
+                                              height: 15,
+                                              child: Image.asset(
+                                                'assets/images/downarrow.png',
+                                                width: 19,
+                                                height: 15,
+                                              ),
                                             ),
-                                          ),
-                                          child: const Text(
-                                            'Exit',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Color(0xFF6A798A),
-                                              fontSize: 16,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w700,
+                                            hintText: 'Select',
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(7),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ],
                                   ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 27,
-                                top: 230,
-                                child: SizedBox(
-                                  width: 295,
-                                  height: 47,
-                                  child: Stack(
+                                  const SizedBox(height: 25),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
-                                      const Positioned(
-                                        left: 28,
-                                        top: 21,
-                                        child: SizedBox(
-                                          width: 267,
-                                          child: Text(
-                                            'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
+                                      const SizedBox(
+                                        width: 120,
+                                        //color: Colors.black,
+                                        child: Text(
+                                          'Time ',
+                                          style: TextStyle(
+                                            color: Color(0xFF1F1F1F),
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 30),
+                                      SizedBox(
+                                        width: 130,
+                                        child: TextFormField(
+                                          controller: _followUpTimeController,
+                                          readOnly: true,
+                                          onTap: () async {
+                                            // Show TimePicker when the field is tapped
+                                            TimeOfDay currentTime =
+                                                TimeOfDay.now();
+                                            TimeOfDay? selectedTime =
+                                                await showTimePicker(
+                                              context: context,
+                                              initialTime: currentTime,
+                                            );
+                                            if (selectedTime != null) {
+                                              _onTimeSelected(selectedTime);
+                                            }
+                                          },
+                                          decoration: InputDecoration(
+                                            suffixIcon: Container(
+                                              // frame340FVw (1:4583)
+                                              width: 19,
+                                              height: 15,
+                                              child: Image.asset(
+                                                'assets/images/downarrow.png',
+                                                width: 19,
+                                                height: 15,
+                                              ),
+                                            ),
+                                            hintText: 'Select',
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(7),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 20,
+                            top: 300,
+                            right: 20,
+                            child: Container(
+                              // width: 355,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = true;
+                                      // });
+                                      _onDonePressed();
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 26, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0xFF03BF9C),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(9)),
+                                      ),
+                                      child: const InkWell(
+                                        child: Text(
+                                          'Done',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = false;
+                                      // });
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const appointment(),
+                                          ));
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 26, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(width: 0.50),
+                                          borderRadius:
+                                              BorderRadius.circular(9),
+                                        ),
+                                      ),
+                                      child: const Text(
+                                        'Exit',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Color(0xFF6A798A),
+                                          fontSize: 16,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 230,
+                            child: SizedBox(
+                              width: 295,
+                              height: 47,
+                              child: Stack(
+                                children: [
+                                  const Positioned(
+                                    left: 28,
+                                    top: 21,
+                                    child: SizedBox(
+                                      width: 267,
+                                      child: Text(
+                                        'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
+                                        style: TextStyle(
+                                          color: Color(0xFF6B6B6B),
+                                          fontSize: 9,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: SizedBox(
+                                      width: 195,
+                                      height: 20,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 20,
+                                            height: 20,
+                                            decoration: const BoxDecoration(
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Colors.grey,
+                                                  offset: Offset(-1, -1),
+                                                ),
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Color.fromARGB(
+                                                      92, 255, 255, 255),
+                                                  offset: Offset(-2, 5),
+                                                ),
+                                              ],
+                                            ),
+                                            // child: Checkbox(
+                                            // side: BorderSide(
+
+                                            //   color:Colors.black,
+                                            //   strokeAlign: BorderSide.strokeAlignInside),
+
+                                            //   activeColor: primaryColor,
+                                            //     value: ischecked_yes,
+                                            //    // tristate: true,
+                                            //     onChanged: (value) {
+                                            //       setState(() {
+                                            //      ischecked_yes  =
+                                            //             value!;
+
+                                            //       });
+                                            //     }),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          const Text(
+                                            'Notify patient on Whatsapp',
                                             style: TextStyle(
                                               color: Color(0xFF6B6B6B),
-                                              fontSize: 9,
+                                              fontSize: 12,
                                               fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        left: 0,
-                                        top: 0,
-                                        child: SizedBox(
-                                          width: 195,
-                                          height: 20,
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                width: 20,
-                                                height: 20,
-                                                decoration: const BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Colors.grey,
-                                                      offset: Offset(-1, -1),
-                                                    ),
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Color.fromARGB(
-                                                          92, 255, 255, 255),
-                                                      offset: Offset(-2, 5),
-                                                    ),
-                                                  ],
-                                                ),
-                                                // child: Checkbox(
-                                                // side: BorderSide(
-
-                                                //   color:Colors.black,
-                                                //   strokeAlign: BorderSide.strokeAlignInside),
-
-                                                //   activeColor: primaryColor,
-                                                //     value: ischecked_yes,
-                                                //    // tristate: true,
-                                                //     onChanged: (value) {
-                                                //       setState(() {
-                                                //      ischecked_yes  =
-                                                //             value!;
-
-                                                //       });
-                                                //     }),
-                                              ),
-                                              const SizedBox(width: 8),
-                                              const Text(
-                                                'Notify patient on Whatsapp',
-                                                style: TextStyle(
-                                                  color: Color(0xFF6B6B6B),
-                                                  fontSize: 12,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 27,
-                                top: 54,
-                                child: Container(
-                                  width: 59,
-                                  decoration: const ShapeDecoration(
-                                    shape: RoundedRectangleBorder(
-                                      side: BorderSide(
-                                        width: 1,
-                                        strokeAlign:
-                                            BorderSide.strokeAlignCenter,
-                                        color: Color(0xFF03BF9C),
+                                        ],
                                       ),
                                     ),
                                   ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 54,
+                            child: Container(
+                              width: 59,
+                              decoration: const ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    width: 1,
+                                    strokeAlign: BorderSide.strokeAlignCenter,
+                                    color: Color(0xFF03BF9C),
+                                  ),
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ))),
+                        ],
+                      ),
+                    ),
+                  ))),
             ),
           );
         });
@@ -2299,243 +2328,242 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 3,
                   child: ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      // borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: Scaffold(
-                        body: Container(
-                          clipBehavior: Clip.antiAlias,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0xFFC7E9E3),
-                                blurRadius: 22,
-                                offset: Offset(0, -4),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                          child: Stack(
-                            children: [
-                              const Positioned(
-                                left: 27,
-                                top: 25,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Do you want to Cancel the scheduled',
-                                      maxLines: 2,
-                                      overflow: TextOverflow.visible,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 17,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                    Text(
-                                      'appointment?',
-                                      maxLines: 2,
-                                      overflow: TextOverflow.visible,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 17,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Positioned(
-                                left: 20,
-                                top: 100,
-                                right: 20,
-                                child: Container(
-                                  // width: 355,
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = true;
-                                          // });
-                                          _onDonePressed();
-                                        },
-                                        child: Container(
-                                          width: 130,
-                                          height: 55,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 20, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: ShapeDecoration(
-                                            color: const Color(0xFF03BF9C),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(9)),
-                                          ),
-                                          child: const InkWell(
-                                            child: Text(
-                                              'No',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 16),
-                                      InkWell(
-                                        onTap: () {
-                                          // setState(() {
-                                          //   visible_timeline = false;
-                                          // });
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const appointment(),
-                                              ));
-                                        },
-                                        child: Container(
-                                          width: 130,
-                                          height: 55,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 20, vertical: 16),
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: ShapeDecoration(
-                                            shape: RoundedRectangleBorder(
-                                              side:
-                                                  const BorderSide(width: 0.50),
-                                              borderRadius:
-                                                  BorderRadius.circular(9),
-                                            ),
-                                          ),
-                                          child: const Text(
-                                            'Yes',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Color(0xFF6A798A),
-                                              fontSize: 16,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                    body: Container(
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0xFFC7E9E3),
+                            blurRadius: 22,
+                            offset: Offset(0, -4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            left: 27,
+                            top: 25,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Do you want to Cancel the scheduled',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.visible,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
+                                Text(
+                                  'appointment?',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.visible,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            left: 20,
+                            top: 100,
+                            right: 20,
+                            child: Container(
+                              // width: 355,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = true;
+                                      // });
+                                      _onDonePressed();
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0xFF03BF9C),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(9)),
+                                      ),
+                                      child: const InkWell(
+                                        child: Text(
+                                          'No',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  InkWell(
+                                    onTap: () {
+                                      // setState(() {
+                                      //   visible_timeline = false;
+                                      // });
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const appointment(),
+                                          ));
+                                    },
+                                    child: Container(
+                                      width: 130,
+                                      height: 55,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20, vertical: 16),
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(width: 0.50),
+                                          borderRadius:
+                                              BorderRadius.circular(9),
+                                        ),
+                                      ),
+                                      child: const Text(
+                                        'Yes',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Color(0xFF6A798A),
+                                          fontSize: 16,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Positioned(
-                                left: 27,
-                                top: 190,
-                                child: SizedBox(
-                                  width: 295,
-                                  height: 47,
-                                  child: Stack(
-                                    children: [
-                                      const Positioned(
-                                        left: 28,
-                                        top: 21,
-                                        child: SizedBox(
-                                          width: 267,
-                                          child: Text(
-                                            'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
+                            ),
+                          ),
+                          Positioned(
+                            left: 27,
+                            top: 180,
+                            child: SizedBox(
+                              width: 295,
+                              height: 47,
+                              child: Stack(
+                                children: [
+                                  const Positioned(
+                                    left: 28,
+                                    top: 21,
+                                    right: 28,
+                                    child: SizedBox(
+                                      width: 267,
+                                      child: Text(
+                                        'This will automatically send a remainder to patient’s Whatsapp 20hrs ago to visit again.',
+                                        style: TextStyle(
+                                          color: Color(0xFF6B6B6B),
+                                          fontSize: 9,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: SizedBox(
+                                      width: 195,
+                                      height: 20,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 20,
+                                            height: 20,
+                                            decoration: const BoxDecoration(
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Colors.grey,
+                                                  offset: Offset(-1, -1),
+                                                ),
+                                                BoxShadow(
+                                                  spreadRadius: 1,
+                                                  blurRadius: 1,
+                                                  color: Color.fromARGB(
+                                                      92, 255, 255, 255),
+                                                  offset: Offset(-2, 5),
+                                                ),
+                                              ],
+                                            ),
+                                            // child: Checkbox(
+                                            // side: BorderSide(
+
+                                            //   color:Colors.black,
+                                            //   strokeAlign: BorderSide.strokeAlignInside),
+
+                                            //   activeColor: primaryColor,
+                                            //     value: ischecked_yes,
+                                            //    // tristate: true,
+                                            //     onChanged: (value) {
+                                            //       setState(() {
+                                            //      ischecked_yes  =
+                                            //             value!;
+
+                                            //       });
+                                            //     }),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          const Text(
+                                            'Notify patient on Whatsapp',
                                             style: TextStyle(
                                               color: Color(0xFF6B6B6B),
-                                              fontSize: 9,
+                                              fontSize: 12,
                                               fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
-                                        ),
+                                        ],
                                       ),
-                                      Positioned(
-                                        left: 0,
-                                        top: 0,
-                                        child: SizedBox(
-                                          width: 195,
-                                          height: 20,
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                width: 20,
-                                                height: 20,
-                                                decoration: const BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Colors.grey,
-                                                      offset: Offset(-1, -1),
-                                                    ),
-                                                    BoxShadow(
-                                                      spreadRadius: 1,
-                                                      blurRadius: 1,
-                                                      color: Color.fromARGB(
-                                                          92, 255, 255, 255),
-                                                      offset: Offset(-2, 5),
-                                                    ),
-                                                  ],
-                                                ),
-                                                // child: Checkbox(
-                                                // side: BorderSide(
-
-                                                //   color:Colors.black,
-                                                //   strokeAlign: BorderSide.strokeAlignInside),
-
-                                                //   activeColor: primaryColor,
-                                                //     value: ischecked_yes,
-                                                //    // tristate: true,
-                                                //     onChanged: (value) {
-                                                //       setState(() {
-                                                //      ischecked_yes  =
-                                                //             value!;
-
-                                                //       });
-                                                //     }),
-                                              ),
-                                              const SizedBox(width: 8),
-                                              const Text(
-                                                'Notify patient on Whatsapp',
-                                                style: TextStyle(
-                                                  color: Color(0xFF6B6B6B),
-                                                  fontSize: 12,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ))),
+                        ],
+                      ),
+                    ),
+                  ))),
             ),
           );
         });
@@ -2702,6 +2730,210 @@ class _Appointment_DetailsState extends State<Appointment_Details> {
                           ),
                         ),
                       ))),
+            ),
+          );
+        });
+  }
+
+  showAlert5(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          // var constraints;
+          return Center(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  top: 8.0, bottom: 8.0, right: 15, left: 15),
+              child: SizedBox(
+                  // padding: MediaQuery.of(context).viewInsets,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 3,
+                  child: ClipRRect(
+                      // borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      child: Scaffold(
+                    body: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 8.0, bottom: 8.0, right: 15, left: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            // notifypatientsjeV (1:6198)
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 3),
+                            child: Text(
+                              'Notify Patients',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff000000),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            // line63S37 (1:6213)
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 24),
+                            width: 59,
+                            height: 2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff03bf9c),
+                            ),
+                          ),
+                          Container(
+                            // frame5889TK (1:6199)
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
+                            width: 251,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  // theappointmentisdelayedbyUVb (1:6200)
+                                  margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                  child: Text(
+                                    'The appointment is delayed by ',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: -0.16,
+                                      color: Color(0xff1f1f1f),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  // frame401a2q (1:6201)
+                                  margin: EdgeInsets.fromLTRB(0, 0, 74, 0),
+                                  padding:
+                                      EdgeInsets.fromLTRB(9.5, 19, 9.5, 19),
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    border:
+                                        Border.all(color: Color(0xff2e2d32)),
+                                    borderRadius: BorderRadius.circular(7),
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        // minsFem (1:6202)
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 0, 81, 0),
+                                        child: Text(
+                                          '10 mins',
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                            letterSpacing: -0.16,
+                                            color: Color(0xff4d4d4d),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        // frame340aBF (1:6203)
+                                        width: 19,
+                                        height: 15,
+                                        child: Image.asset(
+                                          'assets/images/frame-340.png',
+                                          width: 19,
+                                          height: 15,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            // frame20469b (1:6206)
+                            width: double.infinity,
+                            height: 55,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  // frame1292ow (1:6207)
+                                  margin: EdgeInsets.fromLTRB(0, 0, 16, 0),
+                                  child: TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.zero,
+                                    ),
+                                    child: Container(
+                                      padding: EdgeInsets.fromLTRB(
+                                          31, 16.56, 32.56, 15),
+                                      height: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xff03bf9c),
+                                        borderRadius: BorderRadius.circular(9),
+                                      ),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            // sendonK2M (1:6208)
+                                            margin: EdgeInsets.fromLTRB(
+                                                0, 0.44, 3.56, 0),
+                                            child: Text(
+                                              'Send on ',
+                                              style: TextStyle(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w700,
+                                                letterSpacing: 0.16,
+                                                color: Color(0xffffffff),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            // ionlogowhatsappcGM (1:6209)
+                                            margin: EdgeInsets.fromLTRB(
+                                                0, 0, 0, 1.56),
+                                            width: 21.88,
+                                            height: 21.88,
+                                            child: Image.asset(
+                                              'assets/images/ion-logo-whatsapp.png',
+                                              width: 21.88,
+                                              height: 21.88,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  // frame128WsX (1:6211)
+                                  width: 160,
+                                  height: double.infinity,
+                                  decoration: BoxDecoration(
+                                    border:
+                                        Border.all(color: Color(0xff000000)),
+                                    borderRadius: BorderRadius.circular(9),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Exit',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0.16,
+                                        color: Color(0xff6a798a),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ))),
             ),
           );
         });

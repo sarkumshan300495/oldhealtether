@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:healtether_app/Timings/Add_clinic.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
+import 'package:healtether_app/widgets/whatsapp/chat_list.dart';
 
-import '../notification.dart';
+import '../widgets/notification/notification.dart';
 
 class timing extends StatefulWidget {
   const timing({super.key});

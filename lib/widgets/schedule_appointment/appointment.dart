@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:healtether_app/chat.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment_details.dart';
-import 'package:healtether_app/screen/chat_display.dart';
+
 import 'package:healtether_app/constatnts/constant.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:healtether_app/screen/home/home_screen.dart';
+import 'package:healtether_app/widgets/schedule_appointment/appointment_timelinedeatails.dart';
 
 class appointment extends StatefulWidget {
   const appointment({super.key});

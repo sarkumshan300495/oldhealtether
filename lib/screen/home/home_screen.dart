@@ -5,9 +5,9 @@ import 'package:healtether_app/Patient_record.dart';
 
 import 'dart:ui';
 
-import 'package:healtether_app/add_appointment.dart';
-import 'package:healtether_app/chat.dart';
-import 'package:healtether_app/notification.dart';
+import 'package:healtether_app/widgets/add_appointment.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
+import 'package:healtether_app/widgets/notification/notification.dart';
 import 'package:healtether_app/widgets/past_appointment/appoinment_schedula.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 import 'package:healtether_app/payment/payment.dart';
