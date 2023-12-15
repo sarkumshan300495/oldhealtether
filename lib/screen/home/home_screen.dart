@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healtether_app/Patient_record.dart';
-
-import 'dart:ui';
-
+import 'package:healtether_app/screen/manage_staff/staff_record.dart';
 import 'package:healtether_app/widgets/add_appointment.dart';
-import 'package:healtether_app/widgets/whatsapp/chat.dart';
-import 'package:healtether_app/widgets/notification/notification.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
+
 import 'package:healtether_app/widgets/past_appointment/appoinment_schedula.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 import 'package:healtether_app/payment/payment.dart';
@@ -27,23 +26,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _page = 0;
-
-  void pageState() {
-    if (_page == 0) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
-    } else if (_page == 1) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => appointment()));
-    } else if (_page == 2) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => chat()));
-    } else if (_page == 3) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => notification()));
-    }
-  }
-
+ 
   _launchURL() async {
     // const url = 'https://www.healtether.com/';
     /*if (await canLaunch(url)) {
@@ -69,11 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
     await launchUrl(launchUri);
   }
 
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
@@ -92,47 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ]),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xff00E0C7),
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _page,
-        
-        showSelectedLabels: true,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.black,
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/icon_home.png',
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/uis_schedule.png',
-            ),
-            label: 'Appointments',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/ion_logo-whatsapp.png',
-            ),
-            label: 'Chat',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/icon_notifications.png',
-            ),
-            label: 'Notifications',
-          ),
-        ],
-        onTap: (index) {
-          setState(() {
-            _page = index;
-            pageState();
-          });
-        },
-      ),
+
+      
+      bottomNavigationBar: BottomNavigationWidget(),
       body: Container(
         width: double.infinity,
         // height: MediaQuery.of(context).size.height,
@@ -804,7 +752,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                manage_staff(),
+                                                Manage_Staff(),
                                           ),
                                         );
                                       },
@@ -1298,7 +1246,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                           left: 86 * fem,
                                           top: 46 * fem,
                                           child: TextButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const add_appointment(),
+                                    ),
+                                  );
+                                            },
                                             style: TextButton.styleFrom(
                                               padding: EdgeInsets.zero,
                                             ),

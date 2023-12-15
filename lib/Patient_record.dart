@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 import 'package:healtether_app/widgets/whatsapp/chat.dart';
 
@@ -29,6 +30,7 @@ class _patient_recordState extends State<patient_record> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
+      bottomNavigationBar: BottomNavigationWidget(),
         floatingActionButton: Container(
                                               padding: EdgeInsets.fromLTRB(20, 27.25, 22, 27.25),
                                               width: 72,
@@ -1281,87 +1283,7 @@ class _personal_detailsState extends State<personal_details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        color: kprimarycolor,
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.home_outlined,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      // Handle Home button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      );
-                    },
-                  ),
-                  const Text('Home',
-                      style: TextStyle(fontSize: 12, color: Colors.white)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.calendar_month),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const appointment()),
-                      );
-                      // Handle Appointment button pressed
-                    },
-                  ),
-                  const Text('Appointment', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.chat),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const chat()),
-                      );
-                      // Handle Chat button pressed
-                    },
-                  ),
-                  const Text('Chat', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.notifications),
-                    onPressed: () {
-                      // Handle Notification button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  notification()),
-                      );
-                    },
-                  ),
-                  const Text('Notification', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: BottomNavigationWidget(),
       appBar: AppBar(
         title: const Text(
           'Edit',
@@ -1726,87 +1648,7 @@ class _contect_detailsState extends State<contect_details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        color: kprimarycolor,
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.home_outlined,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      // Handle Home button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      );
-                    },
-                  ),
-                  const Text('Home',
-                      style: TextStyle(fontSize: 12, color: Colors.white)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.calendar_month),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const appointment()),
-                      );
-                      // Handle Appointment button pressed
-                    },
-                  ),
-                  const Text('Appointment', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.chat),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const chat()),
-                      );
-                      // Handle Chat button pressed
-                    },
-                  ),
-                  const Text('Chat', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.notifications),
-                    onPressed: () {
-                      // Handle Notification button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  notification()),
-                      );
-                    },
-                  ),
-                  const Text('Notification', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: BottomNavigationWidget(),
       appBar: AppBar(
         title: const Text(
           'Edit',
@@ -2226,87 +2068,7 @@ class _payment_detailsState extends State<payment_details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomAppBar(
-          color: kprimarycolor,
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(
-                        Icons.home_outlined,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {
-                        // Handle Home button pressed
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      },
-                    ),
-                    const Text('Home',
-                        style: TextStyle(fontSize: 12, color: Colors.white)),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.calendar_month),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const appointment()),
-                        );
-                        // Handle Appointment button pressed
-                      },
-                    ),
-                    const Text('Appointment', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.chat),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const chat()),
-                        );
-                        // Handle Chat button pressed
-                      },
-                    ),
-                    const Text('Chat', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.notifications),
-                      onPressed: () {
-                        // Handle Notification button pressed
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>  notification()),
-                        );
-                      },
-                    ),
-                    const Text('Notification', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
+    bottomNavigationBar:BottomNavigationWidget(),
         appBar: AppBar(
           title: const Text(
             'Edit',
@@ -2731,87 +2493,7 @@ class _documents_detailsState extends State<documents_details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        color: kprimarycolor,
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.home_outlined,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      // Handle Home button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      );
-                    },
-                  ),
-                  const Text('Home',
-                      style: TextStyle(fontSize: 12, color: Colors.white)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.calendar_month),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const appointment()),
-                      );
-                      // Handle Appointment button pressed
-                    },
-                  ),
-                  const Text('Appointment', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.chat),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const chat()),
-                      );
-                      // Handle Chat button pressed
-                    },
-                  ),
-                  const Text('Chat', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.notifications),
-                    onPressed: () {
-                      // Handle Notification button pressed
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  notification()),
-                      );
-                    },
-                  ),
-                  const Text('Notification', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar:BottomNavigationWidget(),
       appBar: AppBar(
         title: const Text(
           'Edit',
@@ -2848,66 +2530,7 @@ class _documents_detailsState extends State<documents_details> {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(children: [
-            // Row(
-            //   children: [
-            //     SizedBox(
-            //       width: 15,
-            //     ),
-            //     Container(
-            //       width: 8,
-            //       height: 8,
-            //       decoration: ShapeDecoration(
-            //         color: Color(0xFF03BF9C),
-            //         shape: RoundedRectangleBorder(
-            //           side: BorderSide(width: 0.75, color: Color(0xFF03BF9C)),
-            //           borderRadius: BorderRadius.circular(6),
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: 7,
-            //     ),
-            //     Container(
-            //       width: 8,
-            //       height: 8,
-            //       decoration: ShapeDecoration(
-            //         color: Color(0xFF03BF9C),
-            //         shape: RoundedRectangleBorder(
-            //           side: BorderSide(width: 0.75, color: Color(0xFF03BF9C)),
-            //           borderRadius: BorderRadius.circular(6),
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: 7,
-            //     ),
-            //     Container(
-            //       width: 40,
-            //       height: 8,
-            //       decoration: ShapeDecoration(
-            //         color: Color(0xFF03BF9C),
-            //         shape: RoundedRectangleBorder(
-            //           side: BorderSide(width: 0.75, color: Color(0xFF03BF9C)),
-            //           borderRadius: BorderRadius.circular(6),
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: 7,
-            //     ),
-            //     Container(
-            //       width: 8,
-            //       height: 8,
-            //       decoration: ShapeDecoration(
-            //         color: Color(0xFF03BF9C),
-            //         shape: RoundedRectangleBorder(
-            //           side: BorderSide(width: 0.75, color: Color(0xFF03BF9C)),
-            //           borderRadius: BorderRadius.circular(6),
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            // ),
+         
             const Padding(
               padding: EdgeInsets.all(15.0),
               child: Row(

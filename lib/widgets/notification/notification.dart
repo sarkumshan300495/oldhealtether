@@ -1,8 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:healtether_app/screen/home/home_screen.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
+import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
+import 'package:healtether_app/widgets/whatsapp/chat.dart';
 
 
 
-class notification extends StatelessWidget {
+class notification extends StatefulWidget {
+  @override
+  State<notification> createState() => _notificationState();
+}
+
+class _notificationState extends State<notification> {
+  
+   void navigateToScreen(int index) {
+  switch (index) {
+    case 0:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+      break;
+    case 1:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => appointment()));
+      break;
+    case 2:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => chat()));
+      break;
+    case 3:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));
+      break;
+    default:
+  }
+}
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -1292,6 +1319,7 @@ class notification extends StatelessWidget {
             ),
           ),
         ),
+         bottomNavigationBar: BottomNavigationWidget(),
       ),
           );
   }

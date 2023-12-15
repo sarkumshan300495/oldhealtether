@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 import 'package:intl/intl.dart';
 
@@ -116,6 +117,7 @@ class _Past_Appointment_Details2State extends State<Past_Appointment_Details2> {
               color: Colors.black,
             )),
       ),
+      bottomNavigationBar: BottomNavigationWidget(),
       body: Container(
         width: double.infinity,
         child: Container(
@@ -665,58 +667,7 @@ class _Past_Appointment_Details2State extends State<Past_Appointment_Details2> {
                                                         ],
                                                       ),
                                                     ),
-                                                    // Container(
-                                                    //   // frame597gnZ (1:5807)
-                                                    //   child: Column(
-                                                    //     crossAxisAlignment:
-                                                    //         CrossAxisAlignment
-                                                    //             .start,
-                                                    //     children: [
-                                                    //       Container(
-                                                    //         // followupappointmentscheduledon (1:5808)
-                                                    //         constraints:
-                                                    //             BoxConstraints(
-                                                    //           maxWidth: 270,
-                                                    //         ),
-                                                    //         child: Text(
-                                                    //           'Follow-up appointment scheduled on 12 July, 2023 at 3:20pm in the afternoon.',
-                                                    //           style: TextStyle(
-                                                    //             fontFamily:
-                                                    //                 'Poppins',
-                                                    //             fontSize: 13,
-                                                    //             fontWeight:
-                                                    //                 FontWeight
-                                                    //                     .w400,
-                                                    //             height:
-                                                    //                 1.3899999765,
-                                                    //             letterSpacing:
-                                                    //                 0.26,
-                                                    //             color: Color(
-                                                    //                 0xff000000),
-                                                    //           ),
-                                                    //         ),
-                                                    //       ),
-                                                    //       Text(
-                                                    //         // july2023vgu (1:5809)
-                                                    //         '05 July, 2023',
-                                                    //         style: TextStyle(
-                                                    //           fontFamily:
-                                                    //               'Poppins',
-                                                    //           fontSize: 11,
-                                                    //           fontWeight:
-                                                    //               FontWeight
-                                                    //                   .w500,
-                                                    //           height:
-                                                    //               1.5635559776,
-                                                    //           letterSpacing:
-                                                    //               0.11,
-                                                    //           color: Color(
-                                                    //               0xff730ac6),
-                                                    //         ),
-                                                    //       ),
-                                                    //     ],
-                                                    //   ),
-                                                    // ),
+                                             
                                                   ],
                                                 ),
                                               ),

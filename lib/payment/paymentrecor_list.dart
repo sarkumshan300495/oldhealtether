@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 
 import 'package:healtether_app/payment/paymentrecord_info.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 
 
 
@@ -42,6 +43,7 @@ class PaymentRecord extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationWidget(),
       body: Container(
         width: double.infinity,
         child: Container(

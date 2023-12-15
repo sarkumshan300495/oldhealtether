@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment.dart';
 import 'package:intl/intl.dart';
 import 'package:timeline_tile/timeline_tile.dart';
@@ -152,6 +153,7 @@ class _Appointment_Details_timelineState
               color: Colors.black,
             )),
       ),
+      bottomNavigationBar: BottomNavigationWidget(),
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,

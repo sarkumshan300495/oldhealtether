@@ -14,9 +14,10 @@ class _chatState extends State<chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: true,
+
         appBar: AppBar(
-          backgroundColor:    Color(0xff03bf9c),
+          backgroundColor: Color(0xff03bf9c),
           leading: Container(
             child: IconButton(
                 onPressed: () {
@@ -154,19 +155,18 @@ class _chatState extends State<chat> {
                                                             .center,
                                                     children: [
                                                       Container(
+                                                        width: 30,
+                                                        height: 30,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: Image.asset(
+                                                          'assets/images/floatadd.png',
                                                           width: 30,
-                                                          height: 30,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(),
-                                                          child:  Image.asset(
-                              'assets/images/floatadd.png',
-                              width: 30,
-                              height: 17.5,
-                            ),
-                                                              
-                                                              ),
+                                                          height: 17.5,
+                                                        ),
+                                                      ),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Schedule\nAppointment',
@@ -224,17 +224,18 @@ class _chatState extends State<chat> {
                                                             .center,
                                                     children: [
                                                       Container(
+                                                        width: 30,
+                                                        height: 30,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: Image.asset(
+                                                          'assets/images/solar-notes-linear-Rph.png',
                                                           width: 30,
-                                                          height: 30,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(),
-                                                          child:  Image.asset(
-                             'assets/images/solar-notes-linear-Rph.png',
-                              width: 30,
-                              height: 17.5,
-                            ),),
+                                                          height: 17.5,
+                                                        ),
+                                                      ),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Send\nPrescription',
@@ -292,17 +293,18 @@ class _chatState extends State<chat> {
                                                             .center,
                                                     children: [
                                                       Container(
+                                                        width: 30,
+                                                        height: 30,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: Image.asset(
+                                                          'assets/images/mingcute-bill-line-2v1.png',
                                                           width: 30,
-                                                          height: 30,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(),
-                                                          child:  Image.asset(
-                             'assets/images/mingcute-bill-line-2v1.png',
-                              width: 30,
-                              height: 17.5,
-                            ),),
+                                                          height: 17.5,
+                                                        ),
+                                                      ),
                                                       const SizedBox(height: 4),
                                                       Text(
                                                         'Send\nInvoice',
@@ -334,11 +336,11 @@ class _chatState extends State<chat> {
           ],
         ),
         body: Container(
-           width: double.infinity,
-              height: 646,
-          decoration: BoxDecoration (
-                color: Color(0xfffffee9),
-              ),
+          width: double.infinity,
+          height: 646,
+          decoration: BoxDecoration(
+            color: Color(0xfffffee9),
+          ),
           child: Column(children: [
             SizedBox(
               height: 10,
@@ -481,8 +483,8 @@ class _chatState extends State<chat> {
           ]),
         ),
         bottomNavigationBar: BottomAppBar(
-             color: Color(0xfffffee9),
-          child:      Container(
+          color: Color(0xfffffee9),
+          child: Container(
             // frame482FNm (1:5462)
             width: double.infinity,
             height: double.infinity,
@@ -501,7 +503,7 @@ class _chatState extends State<chat> {
                     // frame152L9K (1:5464)
                     width: double.infinity,
                     height: double.infinity,
-                    decoration: BoxDecoration (
+                    decoration: BoxDecoration(
                       border: Border.all(color: Color(0xff2e2d32)),
                       color: Color(0xfff6f6f6),
                       borderRadius: BorderRadius.circular(7),
@@ -509,8 +511,8 @@ class _chatState extends State<chat> {
                     child: Center(
                       child: RichText(
                         text: TextSpan(
-                          style: TextStyle (
-                             fontFamily: 'Poppins',
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             height: 1.28125,
@@ -524,8 +526,8 @@ class _chatState extends State<chat> {
                             ),
                             TextSpan(
                               text: '.',
-                              style: TextStyle (
-                               fontFamily: 'Poppins',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 height: 1.28125,
@@ -536,8 +538,8 @@ class _chatState extends State<chat> {
                             ),
                             TextSpan(
                               text: '.',
-                              style: TextStyle (
-                                fontFamily:  'Poppins',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 height: 1.28125,
@@ -560,20 +562,18 @@ class _chatState extends State<chat> {
                   margin: EdgeInsets.fromLTRB(0, 0.1, 0, 0.5),
                   child: TextButton(
                     onPressed: () {},
-                    style: TextButton.styleFrom (
+                    style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),
                     child: Expanded(
                       child: Container(
                         padding: EdgeInsets.fromLTRB(21, 20, 21.67, 19.67),
                         height: double.infinity,
-                        decoration: BoxDecoration (
+                        decoration: BoxDecoration(
                           color: Color(0xff03bf9c),
                           borderRadius: BorderRadius.circular(7),
                         ),
-                        child:
-                         Center(
-                          
+                        child: Center(
                           child: SizedBox(
                             width: 18.33,
                             height: 18.33,
@@ -591,6 +591,7 @@ class _chatState extends State<chat> {
               ],
             ),
           ),
-        ));
+        )
+        );
   }
 }

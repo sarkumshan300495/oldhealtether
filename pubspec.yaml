@@ -50,6 +50,7 @@ dependencies:
   firebase_storage: ^11.2.6
   timeline_tile: ^2.0.0
   flutter_svg: ^2.0.9
+  font_awesome_flutter: ^10.6.0
 
 
 dev_dependencies:

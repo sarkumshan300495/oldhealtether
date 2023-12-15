@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 import 'package:healtether_app/widgets/past_appointment/past_appointmentdetails.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment_details.dart';
 
@@ -65,96 +66,7 @@ class _Search_Filter_ResultState extends State<Search_Filter_Result>
                                               ),
                                             ),
        
-        bottomNavigationBar: BottomAppBar(
-          color: kprimarycolor,
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        Icons.home_outlined,
-                      ),
-                      onPressed: () {
-                        // Handle Home button pressed
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      },
-                    ),
-                    Text('Home',
-                        style: TextStyle(
-                          fontSize: 12,
-                        )),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        Icons.calendar_month,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Search_Filter_Result()),
-                        );
-                        // Handle Appointment button pressed
-                      },
-                    ),
-                    Text('Appointment',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.white,
-                        )),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.chat),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => chat()),
-                        );
-                        // Handle Chat button pressed
-                      },
-                    ),
-                    Text('Chat', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.notifications),
-                      onPressed: () {
-                        // Handle Notification button pressed
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => notification()),
-                        );
-                      },
-                    ),
-                    Text('Notification', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
+        bottomNavigationBar:BottomNavigationWidget(),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(

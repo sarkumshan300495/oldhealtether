@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 
 
 class chat_display extends StatelessWidget {
@@ -62,6 +63,7 @@ class chat_display extends StatelessWidget {
       )
     ],
       ),
+      bottomNavigationBar: BottomNavigationWidget(),
       body: Container(
         width: double.infinity,
         child: Container(

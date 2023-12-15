@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healtether_app/widgets/bottom_navigation.dart';
 import 'package:healtether_app/widgets/whatsapp/chat.dart';
 import 'package:healtether_app/widgets/schedule_appointment/appointment_details.dart';
 
@@ -29,64 +30,16 @@ class _appointmentState extends State<appointment>
     _controller.dispose();
     super.dispose();
   }
-int _page = 0;
-  void pageState() {
-    if (_page == 0) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
-    } else if (_page == 1) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => appointment()));
-    } else if (_page == 2) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => chat()));
-    } else if (_page == 3) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => notification()));
-    }
-  }
+
+ 
+
   @override
   Widget build(BuildContext context) {
        double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xff00E0C7),
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _page,
-      showSelectedLabels: true,
-  selectedItemColor:   Colors.white ,
-        unselectedItemColor: Colors.black ,
-     
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/images/icon_home.png',
-               ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/images/uis_schedule.png',
-              ),
-            label: 'Appointments',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/images/ion_logo-whatsapp.png',
-     ),
-            label: 'Chat',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/images/icon_notifications.png',
-          ),
-            label: 'Notifications',
-          ),
-        ],
-        onTap: (index) {
-          setState(() {
-            _page = index;
-           // pageState();
-          });
-        },
-      ),
+      bottomNavigationBar: BottomNavigationWidget(),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
